@@ -1,0 +1,52 @@
+<div style="display: flex; margin: 20px; margin-left: 40px;">
+    <h1 class="mb-0 site-logo" style="font-size: 200%; font-weight: 500;"><a href="">M2SOLUTIONS<span class="text-primary"></span> </a></h1>
+    <input type="image" routerLink="/profile" style="position: absolute; right: 3%; width: 4%; top: 2%;" src="https://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/128/User-icon.png"/>
+  </div>  
+
+  <div style="margin: 5%;" class="row">
+    <div class="column" style="background-color:#72cada; text-align: center;">
+      <h2>Admin List</h2>
+      <div >
+        <li id="listofadmin" *ngFor="let i of datas "> 
+          <div>
+            <button id="adminlist" (click)="shownew($event)" value={{i}} type="button" class="btn btn-success">{{i}}</button>
+          </div>
+      </div>
+      
+    </div>
+    <div class="column" style="background-color:#99b8b5; text-align: center;">
+      <h2>Column 2</h2>
+      <h1 *ngIf="display; then e2"></h1> 
+      <ng-template #e2 id="ngtemp">
+        <li id="adminnew" *ngFor="let i of adminAadd "> 
+          <div>
+            <button id="button21" type="button" class="btn btn-info">{{i}}</button>
+          </div>
+          <!-- <button (click)="selected(i)" style="height: 40px; margin-top: 20px; margin-left: 20px;"  type="submit">
+            <img src="https://icons.iconarchive.com/icons/tatice/cristal-intense/16/ok-icon.png" width="16" height="16">
+          </button> -->
+          <button (click)="rejected(i)" style="height: 40px; margin-top: 20px; margin-left: 15px;"  type="submit">
+            <img src="https://icons.iconarchive.com/icons/hopstarter/button/16/Button-Close-icon.png" width="16" height="16">
+          </button>
+
+      </ng-template>
+      
+    </div>
+    <div class="column" style="background-color:#c5d4da; text-align: center;">
+      <h2>Column 3</h2>
+      <h1 *ngIf="true; then e1"></h1> 
+      <ng-template #e1 id="ngtemp">
+        <li id="adminnew" *ngFor="let i of adminAnew "> 
+          <div>
+            <button id="button2" type="button" class="btn btn-info">{{i}}</button>
+          </div>
+          <button (click)="selected(i)" style="height: 40px; margin-top: 20px; margin-left: 20px;"  type="submit">
+            <img src="https://icons.iconarchive.com/icons/tatice/cristal-intense/16/ok-icon.png" width="16" height="16">
+          </button>
+
+      </ng-template>
+      
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>

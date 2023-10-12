@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Add Team</h2>
+    
+    <form #frm="ngForm" class="form-inline">
+      <div class="form-group">
+        <label for="teamname">Team Name:</label>
+        <input ngModel type="text" class="form-control" id="teamname" placeholder="Enter Team Name" name="teamname">
+      </div>
+      <div class="form-group">
+        <label for="members">Add Members:</label>
+        <select  (change)="onChange($event)"  id="members" name="members" style="height: 40px; width: 150px;" >
+            <option></option>
+            <!-- <option>select</option> -->
+            <option [ngValue]="type" *ngFor='let type of datas'>{{type}}</option>
+            
+        </select>
+          <button style="margin-left: 20px;" type="submit" class="btn btn-default">Add</button>
+      </div>
+   
+      <button (click)="addsalesteam(frm)" type="submit" class="btn btn-default">Ok</button>
+    </form>
+  </div>

@@ -1,0 +1,51 @@
+
+<div class="overlap">
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark" style="margin:0px">
+      
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="" alt="Bootstrap" width="30" height="24">
+        </a>
+        <a class="navbar-brand" href="#">
+          <img src="assets\usericon.jpg" alt="usericon" width="30" height="24">
+        </a>
+      </div>
+      
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style = "margin-bottom: 50px;margin-top: 30px;">
+      
+      
+      <button (click)="newLead()" name="button" id="button" class="btn btn-outline-dark" style="margin-left: 20px;">New</button>
+      <button (click)="generateLead()" name="button" id="button" class="btn btn-outline-dark" style="margin-left: 20px;">Generate leads</button>
+      <button routerLink="/importfile" name="button" id="button" class="btn btn-outline-dark" style="margin-left: 20px;">Import leads</button>
+      <button routerLink="/manageleads" name="button" id="button" class="btn btn-outline-dark" style="margin-left: 20px;">View leads</button>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style = "margin-bottom: 50px;margin-top: 30px;">
+      <h1 >Admin Department</h1>
+      
+      <button (click)="openDialog()" name="button" id="button" class="btn btn-outline-dark" style="margin-left: 20px;">Add Admin</button>
+      <button routerLink="/assignwork" name="button" id="button" class="btn btn-outline-dark" style="margin-left: 20px;">Assign work</button>
+      <!-- <button name="button" id="button" class="btn btn-outline-dark" style="margin-left: 20px;">Generate leads</button> -->
+    </nav>
+    <div id="container">
+      <ul style="list-style-type: none">
+        <li *ngFor="let i of datas ">
+          <div class="card" style="width: 76rem"  id="super" >
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <img src="assets\admin_logo.jpg" alt="..." width="100" height="100" style="margin-left :50px;" >
+              
+              <a  (click)="admindetailspop(i)" class="btn btn-primary" style="margin-left :300px;">{{i}}</a>
+              <a routerLink="/adminteams" (click)="gototeams(i)" class="btn btn-primary"   style="margin-left :450px;">View Teams</a>
+            </nav> 
+            
+          </div>
+            
+          
+          <br><br><br>
+        </ul>
+      </div>
+    </div>
+  
+    
+      <router-outlet></router-outlet>

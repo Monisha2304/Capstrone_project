@@ -1,0 +1,22 @@
+<div id="popup">
+    
+    <div id="title">
+        <h2>Generate Leads</h2>
+        <hr>
+    </div>
+    <div id="dropdown">
+        <label for="industry">Select Industries for Leads to be Generated:</label>
+        <select (change)="onChange($event)" id="industry" name="industry" style="height: 40px; width: 150px;">
+            <option>select</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Banking">Banking</option>
+            <option value="Software services">Software services</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Media">Media</option>
+            <option value="Automobile">Automobile</option>
+        </select>
+    </div>
+    <div id="button">
+        <button (click)="generate()" type="button" class="btn btn-info">Generate</button>
+    </div>
+</div>

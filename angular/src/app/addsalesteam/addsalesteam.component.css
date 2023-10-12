@@ -1,0 +1,33 @@
+input{
+    
+    border:none;
+    border-bottom: 1px solid #040405;
+    padding: 5px 10px;
+    outline: none;
+ }
+
+ input:focus {
+    border-color: green;
+    outline: 1px dotted #000
+  }
+
+  h2{
+    text-align: center;
+    color: black;
+    margin: 10px;
+  }
+  div{
+    margin-bottom: 20px;
+  }
+  label{
+    font-size: large;
+    margin-bottom: 10px;
+  }
+  button{
+    background-color: rgb(150, 197, 226);
+    justify-content: center;
+    align-items: center;
+  }
+  html{
+    background-color: blue;
+  }

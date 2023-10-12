@@ -1,0 +1,34 @@
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark" style="margin:0px">
+
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="" alt="Bootstrap" width="30" height="24">
+      </a>
+      <a class="navbar-brand" href="#">
+        <img src="assets\usericon.jpg" alt="usericon" width="30" height="24">
+      </a>
+    </div>
+
+  </nav>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <h1 >Data Bases</h1>
+    <button name="button" routerLink="/createdatabase" id="button" class="btn btn-outline-dark">Create</button>
+  </nav>
+  <div id="container">
+  <ul style="list-style-type: none">
+    <li *ngFor="let j of datas ">
+        <div class="card" style="width: 18rem" >
+            <img src="assets\cmp.png" alt="..." width="100" height="100">
+            <div class="card-body">
+              <h5 class="card-title">{{j}}</h5>
+              
+              <a  class="btn btn-primary" routerLink="/admins"type="button" (click)="connecttodatabase(j)">Go to Database</a>
+              
+            </div>
+        </div>
+          
+    </li>
+    <br><br><br>
+</ul>
+</div>
+<router-outlet></router-outlet>

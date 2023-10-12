@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 500px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #listofadmin{
+    list-style-type: none;
+  }
+  #adminlist{
+    margin-top: 8%;
+    width: 50%;
+  }
+  #adminnew{
+    list-style-type: none;
+    display: flex;
+    margin-top: 8%;
+  }
+  #button2{
+    margin-top: 8%;
+    width: 250px;
+  }
+  #button21{
+    margin-top: 8%;
+    width: 250px;
+  }
+ 

@@ -1,0 +1,10 @@
+.container{
+    padding: 10%;
+}
+#heading{
+    text-align: center;
+    font-weight: 400;
+}
+#names{
+    font-weight: 500;
+}
