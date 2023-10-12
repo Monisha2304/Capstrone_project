@@ -1,0 +1,72 @@
+<div class="form-body" style="overflow-y: hidden;">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3 style="text-align: center;">Add New Admin</h3>
+                    <!-- <p>Fill in the data below.</p> -->
+                    <form class="requires-validation" novalidate #frm="ngForm">
+  
+                        <div class="col-md-12">
+                           <input ngModel class="form-control" type="text" name="name" placeholder="Full Name" required>
+                           <div class="valid-feedback">Username field is valid!</div>
+                           <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+  
+                        <div class="col-md-12">
+                            <input ngModel class="form-control" type="email" name="email" placeholder="E-mail Address" required>
+                             <div class="valid-feedback">Email field is valid!</div>
+                             <div class="invalid-feedback">Email field cannot be blank!</div>
+                        </div>
+  
+                        <div class="col-md-12">
+                            <input ngModel class="form-control" type="text" name="phone" placeholder="Enter Phone Number" required>
+                             <div class="valid-feedback"></div>
+                             <div class="invalid-feedback"></div>
+                        </div>
+  
+                       
+  
+  
+                       <div class="col-md-12">
+                          <textarea ngModel rows="4" cols="50" style="margin-top: 10px;" name="address" placeholder="Address"></textarea>
+                          <!-- <div class="valid-feedback"></div>
+                          <div class="invalid-feedback"></div> -->
+                       </div>
+  
+                       <div class="col-md-12 mt-3">
+                          <label class="mb-3 mr-1" for="gender" s>Gender: </label>
+    
+                          <input type="radio"  class="btn-check" name="gender" id="male" value="Male" autocomplete="off" required [(ngModel)]='gender'>
+                          <label style="margin-right: 10px; margin-left: 50px;" value="Female" class="btn btn-sm btn-outline-secondary" for="male" >Male</label>
+    
+                          <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required [(ngModel)]='gender'>
+                          <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+                          </div>
+  
+                        <div class="col-md-12" style="display: flex;">
+                           <label style="margin-top: 10px; width: 130px;">Create a New Username</label>
+                          <input ngModel style="" class="form-control" type="text" name="uname" placeholder="Username" required>
+                    
+                      </div>
+                        <div class="col-md-12" style="display: flex;">
+                           <label style="margin-top: 10px; width: 130px;">One-time login code</label>
+                          <input ngModel style="" class="form-control" type="text" name="code" placeholder="Login Code" required>
+                    
+                      </div>
+  
+  
+                       
+  
+                        
+  
+                        <div class="form-button mt-3">
+                            <button (click)="createAdmin(frm)" id="submit" type="submit" class="btn btn-primary">Add Admin</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  

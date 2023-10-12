@@ -1,0 +1,67 @@
+<!-- <div style="display: flex;">
+<div>
+    <img src="assets/Iconoir-Team-Iconoir-Import.512.png" alt="Computer man" style="width:40%;height:40%;margin-top:20%; margin-left:20%" >  
+    <h5 style="margin-left: 10%;">Upload a Excel or Csv file to Import</h5> 
+    <button style="margin-left: 25%; margin-top: 10%;" type="submit" class="btn btn-primary btn-lg">Upload File</button>
+</div>
+<div>
+    <img src="assets/Iconoir-Team-Iconoir-Import.512.png" alt="Computer man" style="width:40%;height:40%;margin-top:20%; margin-left:20%" >  
+    <h5 style="margin-left: 10%;">Download the format for Xsl Files</h5> 
+<button style="margin-left: 25%; margin-top: 10%;" type="submit" class="btn btn-primary btn-lg">View Template</button>
+</div>
+</div> -->
+        
+<div class="frame">
+    <div class="center">
+        <div class="title">
+            <h1 style="font-weight: 1000;">Drop file to upload</h1>
+        </div>
+        
+    <div class="formgroup">
+        <input type="file" class="form-control" accept="application/vnd.ms-excel" (change)="onSelectFile($event)" style="height: 100%;">
+
+<div class="file-upload">  
+
+<!-- {{userfile|| "No file uploaded yet."}}   -->
+
+<!-- <button mat-mini-fab color="primary" class="upload-btn">  
+<mat-icon>attach_file</mat-icon>   
+</button>    -->
+</div>   
+    </div>
+    
+    <button (click)="saveForm()" type="button" class="btn" name="uploadbutton">Upload file</button>
+    
+</div>
+<a href = "assets/LeadOpportunity (crm.lead).xlsx" type="button" id="downbtn" name="Downloadbutton" download>Click Here to Download Template</a>
+</div>
+
+<div style="position: absolute; left: 40%; top: 10%; display: flex;">
+<div class="vl"></div>
+<div style="margin-top: 0%; margin-left: 30%;">
+    <h5>Step 1</h5>
+    <div class="card" style="height: 20%; width: 100%; background-color: rgb(208, 216, 164); margin-bottom: 10%;">
+        <div class="card-body">
+            
+            <h5 style="">Download the template for excel format</h5>
+        </div>
+    </div>
+    <h5>Step 2</h5>
+    <div class="card" style="height: 20%; width: 100%; background-color: rgb(167, 212, 212); margin-bottom: 10%;">
+        <div class="card-body">
+            <h5>Prepare a Excel file with Lead details in the format given</h5>
+        </div>
+    </div>
+    <h5>Step 3</h5>
+    <div class="card" style="height: 20%; width: 100%; background-color: rgb(235, 210, 165); margin-bottom: 10%;">
+        <div class="card-body">
+            <h5>Upload the Excel file, the leads will be imported</h5>
+        </div>
+    </div>
+</div>
+</div>
+<router-outlet></router-outlet>
+
+<!-- original pen: https://codepen.io/roydigerhund/pen/ZQdbeN  -->
+
+<!-- NO JS ADDED YET -->

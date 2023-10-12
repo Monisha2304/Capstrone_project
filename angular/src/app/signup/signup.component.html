@@ -1,0 +1,165 @@
+
+<body>
+
+    <div>
+      <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+          <div class="container">
+          <div class="row align-items-center">
+          <div class="col-6 col-xl-2">
+          <h1 class="mb-0 site-logo"><a href="">M2SOLUTIONS<span class="text-primary"></span> </a></h1>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+          <li><a href="#home-section" class="nav-link" id = "header">Home</a></li>
+         
+          <li><a href="#our-features" class="nav-link" id = "header">Our Features</a> </li>
+          <li><a  class="nav-link" id = "button">Already a user?</a> </li>
+          <!-- <p>Already a user?</p> -->
+          <button type="button" routerLink="/signin" class="btn btn-primary">SIGN IN</button>
+          
+      </ul>
+  </nav>
+  </div>
+  <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+  </div>
+  </div>
+  </header>
+  </div>
+  
+  
+  
+  
+ 
+  
+  <section style="background-color: white; padding-top: 350px;">
+    
+    <!-- <div class="container h-100"> -->
+      <!-- <div class="row d-flex justify-content-center align-items-center h-100"> -->
+        <!-- <div class="col-lg-12 col-xl-11" style="background-color: red;"> -->
+          <!-- <div  style="border-radius: 25px;"> -->
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style="color:rgb(79, 79, 239)">SIGN UP</p>
+  
+                  <form class="mx-1 mx-md-4" #frm="ngForm" >
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example1c">Your Name</label>
+                        <input ngModel type="text" name="name" id="form3Example1c" class="form-control" />
+                      </div>
+                    </div>
+  
+                    <!-- <form method="dialog" #frm="ngForm" (submit) = "update(frm)"> -->
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example3c">Your Email</label>
+                        <input ngModel name = "email" type="email" id="form3Example3c" class="form-control"   pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                      </div>
+                    </div>
+                    <!-- </form> -->
+
+                    <!-- <form method="dialog"> -->
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example3c1">Your Phone Number</label>
+                        <input ngModel name="phone" type="tel" id="form3Example3c1" pattern="[789][0-9]{9}" class="form-control" title="Please enter valid mobile number"/>
+                      </div>
+                    </div>
+                    <!-- </form> -->
+
+                      <!-- <form method="dialog" #frm="ngForm" (submit) = "update(frm)"> -->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="username">Username</label>
+                            <input ngModel name = "username" type="text" id="username" class="form-control">
+                          </div>
+                        </div>
+                        <!-- </form> -->
+  
+                    <!-- <form method="dialog"> -->
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example4c3">Password</label>
+                        <input ngModel name="password" type="password" id="form3Example4c3" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" title=" 8 or more characters">
+                      </div>
+                    </div>
+                    <!-- </form> -->
+  
+                    <!-- <form method="dialog"> -->
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                        <input ngModel name="confirmpassword" type="password" id="form3Example4cd" class="form-control" />
+                      </div>
+                    </div>
+                    <!-- </form> -->
+
+                    <!-- <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <a href="">CLick Me to Generate Google Authenticator Id</a>
+                        <input ngModel name="authcode" type="" id="form3Example4cd1" class="form-control" />
+                      </div>
+                    </div> -->
+  
+                    <div class="form-check d-flex justify-content-center mb-5">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                      <label class="form-check-label" for="form2Example3c">
+                        I agree all statements in <a href="#!">Terms of service</a>
+                      </label>
+                    </div>
+  
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button (click) = "update(frm)" type="submit" class="btn btn-primary btn-lg">Register</button>
+                    </div>
+  
+                  </form>
+  
+                </div>
+                <div  class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+  
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                    class="img-fluid" alt="Sample image">
+  
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+      <!-- </div> -->
+      <h1 *ngIf ="k; then e2 else e1"></h1>
+      <ng-template #e1>
+      </ng-template>
+      <ng-template #e2>
+        <a routerLink = "/data">dsf</a>
+        
+      </ng-template>
+  </section>
+  <!-- <button name="button" (click)="getdata1()">EMPLOYEE1</button> -->
+  <!-- <ul>
+    <li *ngFor="let group of info">
+    {{group}}
+    <ul>
+        <li *ngFor="let light of group">
+        {{light}}
+        </li>
+    </ul>
+    </li>
+</ul> -->
+
+<!-- {{ frm.value | json }} -->
+        <router-outlet></router-outlet>
+      </body>
+      
+      

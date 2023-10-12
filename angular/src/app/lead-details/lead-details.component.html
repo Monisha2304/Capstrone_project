@@ -1,0 +1,119 @@
+<body>
+
+    <!-- <h1 class="mb-0 site-logo" style="margin: 20px; margin-left: 40px; font-size: 200%;"><a href="">M2SOLUTIONS<span class="text-primary"></span> </a></h1> -->
+  <div style="margin-top: 100px; margin-bottom: 5px;" >
+      <button type="button" class="btn btn-primary" style="background-color: rgb(210, 183, 147);">Delete Lead</button>
+  </div>
+  
+  <div style="display: flex;">
+  <div class="card" style="width:75%;">
+      <div class="card-header">
+        Lead Details
+      </div>
+      <div class="card-body">
+        <h4 class="card-title" style="text-align: center;">{{uses?.lcmpname}}</h4>
+        <h5 class="card-text">DESCRIPTION</h5>
+        <textarea id="w3review" name="w3review" rows="5" cols="110">
+         {{uses?.requirement}}
+          </textarea>
+        <div style="display: flex; margin-top: 10px; margin-bottom: 30px;">  
+          <div class="card-text" style="display: flex; margin-right: 430px;">
+                      <h5 style="margin-right:20px;">Email:</h5>
+                      <p> {{uses?.lemail}}  </p>
+          </div>
+          <div class="card-text" style="display: flex;">
+              <h5 style="margin-right:20px ;">Phone:</h5>
+              <p>{{uses?.lphonenumber}}</p>
+          </div>
+         </div>
+         <div style="display: flex; margin-bottom: 30px;">
+           <div class="card-text" style="display: flex; margin-right: 473px;">
+               <h5 style="margin-right:20px ;">Viewed by:</h5>
+              <p> {{uses?.salesperson}} </p>
+          </div>
+          <div class="card-text" style="display: flex;">
+          <h5 style="margin-right:20px ;">Stage:</h5>
+          <p> {{uses?.stage}} </p>
+          </div>       
+          </div>
+          <a  class="btn btn-primary" style="background-color: rgb(211, 183, 148); margin-right: 30px;">Shedule Meeting</a>
+          <a (click)="getinputlog()" class="btn btn-primary" style="background-color: rgb(211, 183, 148);">Add Log</a>
+      </div>
+    </div>
+    <div style="margin: 5%; display:grid; grid-gap: 10px;">
+
+      <p *ngIf="ifs; then nonadmin"></p>
+  
+      <ng-template #nonadmin>
+  
+        <h4>CHANGE STATE</h4>
+  
+        <button type="button" (click)="newlog()" class="btn btn-primary" style="background-color: rgb(180, 222, 168); font-weight: 700;">New</button>
+  
+        <button type="button" (click)="qualifiedlog()" class="btn btn-primary" style="background-color: rgb(180, 222, 168); font-weight: 700">Qualified</button>
+  
+        <button type="button" (click)="prepositionlog()" class="btn btn-primary" style="background-color: rgb(180, 222, 168); font-weight: 700">Proposition</button>
+  
+        <button type="button" (click)="negotiationlog()" class="btn btn-primary" style="background-color: rgb(180, 222, 168); font-weight: 700">Negotiation</button>
+  
+        <button type="button" (click)="wonlog()" class="btn btn-primary" style="background-color: rgb(180, 222, 168); font-weight: 700">Won</button>
+  
+      </ng-template>
+  
+   
+  
+    </div>
+  
+  </div>
+  
+  
+  <div style="margin-top: 70px;">
+       <h4 style="">LOGS Of Leadname</h4>
+       <!-- <p id ="timestamp">{{datetime|date:'medium'}}</p>
+       <p id="person"></p>
+       <p id="before"></p>
+       <p id="after"></p>
+       <p id="details">{{Logmessage}}</p>
+       <p *ngIf="ifs; then e1"></p>
+  
+       <ng-template #e1>
+          <hr style="margin-right: 40px;">
+        </ng-template>
+        -->
+        <div *ngFor="let group of Logdetails">
+
+ 
+
+          <p><b>{{group.timestamp|date:'medium'}}</b></p>
+   
+          <p *ngIf="type; then e1 else e2"></p>
+   
+          <ng-template #e1>
+   
+           <p><b>{{group.salesman}} Added a log </b></p>
+   
+         </ng-template>
+   
+          <ng-template #e2>
+   
+            <p><b>{{group.salesman}}</b> Changed the state from <b>{{group.stagebefore}}</b> to <b>{{group.stageafter}}</b></p>
+   
+         </ng-template>
+   
+         <p id="innerlog"></p>
+   
+           <!-- <p>{{group.stagebefore}}</p>
+   
+           <p>{{group.stageafter}}</p> -->
+   
+           <p><b>Log Message: </b>{{group.log}}</p>
+   
+           <hr style="margin-right: 40px;">
+   
+        </div>
+  </div>
+  <router-outlet></router-outlet>
+  
+  </body>
+  
+  

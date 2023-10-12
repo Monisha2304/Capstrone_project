@@ -1,0 +1,60 @@
+
+<div class="container">
+    
+    <form #frm="ngForm">
+        <h2>New Lead Generation</h2>
+        <div class="flexcomponent">
+
+            <div>
+                <label for="compname">Company Name:</label>
+                <input ngModel type="text" id="compname" name="compname" placeholder="Company Name">
+            </div>
+            <div>
+                <label for="contactname">Contact Name:</label>
+                <input ngModel type="text" id="contactname" name="contactname" placeholder="Contact Name">
+            </div>
+        </div>
+        <div>
+            <label for="textarea">Requirement:</label>
+            <textarea ngModel name="req" class="" id="textarea" placeholder="Requirement" rows="4" cols="95"></textarea>
+        </div>
+        <div class="flexcomponent">
+
+            <div> 
+                <label for="email">Email:</label>
+                <input ngModel id="email" type="email" name="email" placeholder="Email">
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input ngModel id="phone" type="text" name="phone" placeholder="Phone Number">
+            </div>
+        </div>
+        <div class="flexcomponent">
+
+            <div>
+                <label for="position">Job Position:</label>
+                <input id="position" ngModel type="text" name="jobposition" placeholder="jobposition">
+            </div>
+            <div>
+                <label for="country">Country:</label>
+                <input id="country" ngModel type="text" name="country" placeholder="Phone Number">
+            </div>
+        </div>
+
+        <div class="flexcomponent">
+
+            <div>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" ngModel class="" placeholder="Address" rows="4" cols="50"></textarea>
+                <label for="industry" style="margin-top: 30px;">Industry:</label>
+                <textarea id="industry" name="industry" ngModel class="" placeholder="industry" rows="2" cols="20"></textarea>
+            </div>
+
+            <div>
+                <label for="website" style="margin-top: 30px;">Website:</label>
+                <input id="website" ngModel type="text" name="website" placeholder="Website">
+            </div>
+      </div>
+      <button (click)="addLead(frm)" type="button" class="btn btn-outline-success">Add Lead</button>
+    </form>
+</div>

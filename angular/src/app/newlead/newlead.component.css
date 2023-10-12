@@ -1,0 +1,43 @@
+h2{
+    margin: 20px;
+    text-align: center;
+  }
+  div{
+      padding-bottom: 20px;
+  }
+  label{
+      width: 130px;
+      font-weight: 600;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  input{
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: rgb(4, 4, 18)
+  }
+  .container{
+      padding: 10px;
+      overflow-y: hidden;
+      background-color: antiquewhite;
+  }
+  input:focus {
+      border-color: green;
+      outline: 1px dotted #000
+    }
+  .flexcomponent{
+      display: flex;
+  
+  }
+  .flexcomponent div{
+      margin-right: 70px;
+  }
+  html, body {
+      height: 100%;
+      background-color: #107fc8;
+      overflow: hidden !important;
+  }
+  button{
+      margin-left: 40%;
+  }
+  

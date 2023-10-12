@@ -1,0 +1,57 @@
+
+<body>
+
+    <div>
+      <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+          <div class="container">
+          <div class="row align-items-center">
+          <div class="col-6 col-xl-2">
+          <h1 class="mb-0 site-logo"><a href="">M2SOLUTIONS<span class="text-primary"></span> </a></h1>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+          <li><a href="#home-section" class="nav-link" id = "header">Home</a></li>
+         
+          <li><a href="#our-features" class="nav-link" id = "header">Our Features</a> </li>
+  
+          <button type="button" routerLink="/signup" id="button" class="btn btn-primary">SIGN UP</button>
+      </ul>
+  </nav>
+  </div>
+  <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+  </div>
+  </div>
+  </header>
+  </div>
+  
+  
+  
+  
+  
+  
+  <div id = "flex1">
+    <form class="form-signin" #frm="ngForm">
+      <!-- <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+      <h1 class="h3 mb-3 font-weight-normal">PLEASE SIGN IN</h1>
+      <label for="inputEmail" class="sr-only">Username</label>
+          <input ngModel name="uname" type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input ngModel name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <!-- <label for="inputEmail" class="sr-only">Google Authenticator Password</label>
+          <input type="auth" id="auth" class="form-control" placeholder="Auth Password" required autofocus> -->
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button (click)="signincheck(frm)" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p> -->
+        </form>
+  
+        <img src="assets/pexels-cottonbro-studio-5082561.jpg" alt="Computer man" style="width:700px;height:500px;">   
+      </div>
+        <router-outlet></router-outlet>
+      </body>
+      
+      
